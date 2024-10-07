@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUA Kalteng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Import Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> -->
+    <link rel="icon" href="img/LOGO.svg" type="image/svg+xml">
+  </head>
+  <header class="bg-white sticky top-0 z-50">
+    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <div class="md:flex md:items-center md:gap-12">
+          <a class="block text-teal-600" href="#">
+            <span class="sr-only">Home</span>
+            <!-- <svg
+              class="h-8"
+              viewBox="0 0 28 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
+                fill="currentColor"
+              />
+            </svg> -->
+            <img src="img/LOGO.svg" alt="Logo" class="w-16 h-16 object-contain mx-auto" />
+
+
+
+          </a>
+          <div class="hidden md:block">
+          <a
+                  class="text-gray-500 transition hover:text-gray-500/75 mr-12"
+                  href="https://api.whatsapp.com/send/?phone=%2B6281254561349&text=Hallo+mau+tanya-tanya%E2%80%A6+%0A%0ANama%3A%0AAlamat%3A%0AAcara%3A%0AJam+Acara%3A%0A%0A%0AThankyou.&type=phone_number&app_absent=0"
+                >
+                  Whatsapp me
+                </a>
+                <a
+                  class="text-gray-500 transition hover:text-gray-500/75"
+                  href="https://www.instagram.com/nindyeryy_makeup/"
+                >
+                  Instagrams : @Nindyery_makeup
+                </a>
+              </div>
+        </div>
+
+        <div class="hidden md:block">
+          <nav aria-label="Global">
+            <ul class="flex items-center gap-6 text-sm">
+              <li>
+                <a
+                  class="text-gray-500 transition hover:text-gray-500/75"
+                  href="#about"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-gray-500 transition hover:text-gray-500/75"
+                  href="#harga"
+                >
+                  Harga
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-gray-500 transition hover:text-gray-500/75"
+                  href="#service"
+                >
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-gray-500 transition hover:text-gray-500/75"
+                  href="#koleksi"
+                >
+                  Koleksi
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-gray-500 transition hover:text-gray-500/75"
+                  href="#service"
+                >
+                  Ketentuan
+                </a>
+              </li>
+
+        
+            </ul>
+          </nav>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="sm:flex sm:gap-4">
+            <a
+              class="rounded-md bg-[#C39898] hover:bg-[#F1E5D1] hover:shadow-lg px-5 py-2.5 text-sm font-medium text-white shadow"
+              href="https://linkbio.co/6062314h5RpqW?fbclid=PAZXh0bgNhZW0CMTEAAaaZQWq2sX3Mj-4101_DN-26_LTNDNoU28QXr9YaKurzla_h_0RFMY7Tyxo_aem_Hg8Vqrgmk9x_PUvhnG4NnQ."
+            >
+            Hubungi Kami
+            </a>
+
+            <!-- <div class="hidden sm:flex">
+              <a
+                class="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
+                href="#"
+              >
+                Register
+              </a>
+            </div>
+          </div> -->
+
+          <!-- <div class="block md:hidden">
+            <button
+              class="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+    <!-- Container -->
+    <!-- source: https://codepen.io/mfg888/pen/MWVGddj -->
+    <container class="1">
+      <section class="px-3 py-5 bg-neutral-100 lg:py-10">
+        <div
+          class="grid lg:grid-cols-2 items-center justify-items-center gap-5"
+        >
+          <div
+            class="order-2 lg:order-1 flex flex-col justify-center items-center"
+          >
+            <p class="text-4xl font-bold md:text-7xl text-[#C39898] " style="font-family: 'Parisienne', cursive;">
+              Make Up Artist
+            </p>
+            <br>
+            <p id="typewriter" class="text-4xl text-[#987070] font-bold md:text-7xl" style="font-family: 'Sacramento', cursive;"></p>
+            <br>
+            <p class="mt-2 text-sm md:text-lg">For limited time only!</p>
+            <div class="flex flex-wrap justify-center">
+              <a class="bg-[#C39898] rounded-tl-full text-neutral-100 rounded-br-full text-md text-center hover hover:bg-[#F1E5D1] self-center px-4 py-2 m-2"  href="https://linkbio.co/6062314h5RpqW?fbclid=PAZXh0bgNhZW0CMTEAAaaZQWq2sX3Mj-4101_DN-26_LTNDNoU28QXr9YaKurzla_h_0RFMY7Tyxo_aem_Hg8Vqrgmk9x_PUvhnG4NnQ.">
+              Booking Sekarang </a>
+<br>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <!-- <img class="h-80 w-80 object-cover lg:w-[500px] lg:h-[500px]" src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" alt=""> -->
+            <!-- https://gist.github.com/goodreds/5b8a4a2bf11ff67557d38c5e727ea86c -->
+            <div
+              class="max-w-2xl mx-4 sm:max-w-sm md:max-w-sm lg:max-w-sm xl:max-w-sm sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto mt-16 bg-white shadow-xl rounded-lg text-gray-900"
+            >
+              <div class="rounded-t-lg h-32 overflow-hidden">
+                <img
+                  class="object-cover object-top w-full"
+                  src="https://images.unsplash.com/photo-1591019479261-1a103585c559?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Mountain"
+                />
+              </div>
+              <div
+                class="mx-auto w-32 h-32 relative -mt-16 border-4 border-white rounded-full overflow-hidden"
+              >
+                <img
+                  class="object-cover object-center h-32"
+                  src="img/LOGO.jpg"
+                  alt="Woman looking front"
+                />
+              </div>
+              <div class="text-center mt-2">
+                <h2 class="font-semibold" >Nindy Ery Shimada</h2>
+                <p class="text-gray-500">Makeup Artist - Kalimantan Tengah</p>
+              </div>
+              <ul
+                class="py-4 mt-2 text-gray-700 flex items-center justify-around"
+              >
+                <li class="flex flex-col items-center justify-around">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6" fill="gray">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                  </svg>
+
+                  <div>10k</div>
+                </li>
+                <li class="flex flex-col items-center justify-between">
+                  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 24 24" 
+  class="w-6 h-6" 
+  fill="gray"
+>
+  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-3.31 0-10 1.67-10 5v2h20v-2c0-3.33-6.69-5-10-5z"/>
+</svg>
+
+                  <div>1k</div>
+                </li>
+                <li class="flex flex-col items-center justify-around">
+                  <svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  viewBox="0 0 24 24" 
+  class="w-6 h-6" 
+  fill="gray"
+>
+  <path d="M10 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8l-8-4h-6zM4 6h6l2 2h8v12H4V6z"/>
+</svg>
+
+                  <div>100+</div>
+                </li>
+              </ul>
+              <div class="p-4 border-t mx-8 mt-2">
+                <button
+                  class="w-1/2 block mx-auto rounded-full bg-gray-900 hover:bg-gray-400 hover:shadow-lg font-semibold text-white px-6 py-2" 
+                ><a href="https://www.instagram.com/nindyeryy_makeup/">
+                  Follow
+                </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </container>
+    <container id="about" class="2 " >
+      <!-- https://gist.github.com/goodreds/3d044027175954984fb96c7407a955ab -->
+
+      <!-- Container -->
+      <div 
+        class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl "
+      >
+        <!-- Image Column -->
+        <div class="w-full h-64 lg:w-1/2 lg:h-auto">
+          <img
+            class="h-full w-full object-cover"
+            src="img/foto1.jpg"
+            alt="Winding mountain road"
+          />
+        </div>
+        <!-- Close Image Column -->
+
+        <!-- Text Column -->
+        <div 
+          class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute  md:top-0 md:mt-48 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12 "
+        >
+          <!-- Text Wrapper -->
+          <div class="flex flex-col p-12 md:px-16 md:bg-neutral-100 lg:bg-neutral-100  ">
+            <h2
+              class="text-3xl font-medium text-[#987070] lg:text-4xl" style="font-family: 'Sacramento', cursive;"
+            >
+              Nindyery_makeup
+            </h2>
+            <br>
+            <h3 class="font-bold">Jasa Makeup Artis - MUA Kalimantan Tengah</h3>
+            <p class="mt-4">
+              Sedang cari Jasa MUA / Professional Makeup Artis terdekat? Buat
+              kalian yang mencari MUA di Kalimantan Tengah / Barat bisa
+              konsultasi dan booking layanan Makeup Artis di Nindyery_makeup. Tersedia
+              layanan Jasa Makeup Artist untuk acara Engagement, Prewedding,
+              Photoshoot, Wisuda, Sweet Seventeen dan acara lainnya.
+              Ayo konsultasi dan booking sekarang dengan menghubungi kontak Nindy
+              MUA Seruyan.
+            </p>
+            <!-- Button Container -->
+            <!-- <div  class="mt-8">
+              <a
+                href="#"
+                class="inline-block w-full text-center text-lg font-medium text-gray-100 bg-orange-600 border-solid border-2 border-gray-600 py-4 px-10 hover:bg-orange-800 hover:shadow-md md:w-48"
+                >Read More</a
+              >
+            </div> -->
+          </div>
+          <!-- Close Text Wrapper -->
+        </div>
+        <!-- Close Text Column -->
+      </div>
+      <div id="koleksi" class="max-w-screen mt-12 ">
+          <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M0 43.9999C106.667 43.9999 213.333 7.99994 320 7.99994C426.667 7.99994 533.333 43.9999 640 43.9999C746.667 43.9999 853.333 7.99994 960 7.99994C1066.67 7.99994 1173.33 43.9999 1280 43.9999C1386.67 43.9999 1440 19.0266 1440 9.01329V100H0V43.9999Z"
+                  class="fill-current text-neutral-100"></path>
+          </svg>
+      </div>
+      </container>
+     
+
+      
+      <container  class="3 ">
+        <h2 class="text-3xl font-bold tracki text-center mt-12 sm:text-5xl " style="font-family: 'Parisienne', cursive;">Portofolio </h2>
+        <div class=" ">
+          <!-- <h2 class="text-3xl font-bold tracki text-center mt-12 sm:text-5xl ">Harga</h2> -->
+          <!-- <div class="flex items-center mb-12">
+            <div class="border-t border-4 border-white flex-grow"></div>
+            <div class="px-3 text-orange-600 font-bold text-4xl md:text-3xl">Koleksi Saya</div>
+            <div class="border-t border-4 border-white flex-grow"></div>
+        </div> -->
+        
+        
+        <div class="max-w-7xl mx-auto mt-8 ">
+          <div id="default-carousel" class="relative" data-carousel="static">
+              <!-- Carousel wrapper -->
+              <div class="overflow-hidden relative h-[320px] sm:h-[480px] md:h-[720px] rounded-lg ">
+
+                  <!-- Item 1 -->
+                  <div class="flex duration-700 ease-in-out gap-1  " data-carousel-item>
+                    <div class="w-full relative">
+                      <img src="img/ss.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 1">
+                      <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+          
+                      <div class="w-full relative">
+                          <img src="img/foto2.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 2">
+                          <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+          
+                      <div class="w-full relative">
+                          <img src="img/foto3.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 3">
+                          <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+                  </div>
+
+                  <!-- Item 2 -->
+                  <div class="flex duration-700 ease-in-out gap-1 hidden" data-carousel-item>
+                      <div class="w-full relative">
+                      <img src="img/foto4.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 4">
+                      <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+          
+                      <div class="w-full relative">
+                          <img src="img/foto5.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 5">
+                          <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+          
+                      <div class="w-full relative">
+                          <img src="img/foto6.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 6">
+                          <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+
+                  </div>
+
+                  <!-- Item 3 -->
+                  <div class="flex duration-700 ease-in-out gap-1 hidden" data-carousel-item>
+                    <div class="w-full relative">
+                      <img src="img/foto7.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 7">
+                      <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+          
+                      <div class="w-full relative">
+                          <img src="img/foto8.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 8">
+                          <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+          
+                      <div class="w-full relative">
+                          <img src="img/foto9.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 9">
+                          <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+
+                  </div>
+
+                  <!-- Item 4 -->
+                  <div class="flex duration-700 ease-in-out gap-1 hidden" data-carousel-item>
+                    <div class="w-full relative">
+                      <img src="img/foto10.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 10">
+                      <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+          
+                      <div class="w-full relative">
+                          <img src="img/foto11.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 11">
+                          <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+          
+                      <div class="w-full relative">
+                          <img src="img/foto12.jpg" class="w-full h-[320px] sm:h-[480px] md:h-[720px] object-cover transform transition-transform duration-300 hover:scale-110" alt="Slide 12">
+                          <img src="img/ne.png" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-[100px] sm:w-[160px] lg:w-[200px] opacity-100 z-10" alt="Logo">
+                      </div>
+
+                  </div>
+
+              </div>
+        
+              <!-- Slider indicators -->
+              <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+                  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                  <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="3"></button>
+              </div>
+        
+              <!-- Slider controls -->
+              <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+                  <span class="inline-flex justify-center items-center w-8 h-8 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white focus:outline-none">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                      <span class="hidden">Previous</span>
+                  </span>
+              </button>
+              <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+                  <span class="inline-flex justify-center items-center w-8 h-8 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white focus:outline-none">
+                      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                      <span class="hidden">Next</span>
+                  </span>
+              </button>
+          </div>
+          <div class="copyright-notice text-left mt-4">
+            <p class="text-gray-600">
+              <i>* Semua gambar ini adalah milik pribadi dan dilindungi oleh hak cipta. </i><a class="text-blue-600 hover:underline" href="https://www.hukumonline.com/pusatdata/download/2020/UU-No-28-2014-tentang-Hak-Cipta.pdf" target="_blank" class="text-blue-600 underline" target="_blank">UU Nomor 28 Tahun 2014 tentang Hak Cipta</a>
+            </p>
+          </div>
+           
+          <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+        </div>
+        
+              
+        </div>
+        
+      </container>
+
+
+      
+      <container id="service" class="5">
+        <div class="service">
+          <div class="p-10">
+            <h2 class="text-3xl font-bold tracki text-center mt-12 sm:text-5xl " style="font-family: 'Parisienne', cursive;">Melayani</h2>
+            <p class="max-w-3xl mx-auto mt-4 text-xl text-center mb-8">Mulailah dengan paket gratis kami dan tingkatkan saat Anda siap..</p>
+
+            <div class="relative max-w-7xl mx-auto">
+                <div class="max-w-lg mx-auto rounded-lg shadow-lg overflow-hidden lg:max-w-none lg:flex">
+                    <div class="flex-1 px-6 py-8 lg:p-12 bg-[#C39898]">
+                        <h3 class="text-2xl font-extrabold text-center text-white sm:text-3xl" style="font-family: 'Parisienne', cursive;">Jasa Makeup</h3>
+                        <p class="mt-6 text-base text-gray-50 sm:text-lg">
+                        </p>
+                        <div class="mt-8">
+                            <div class="flex items-center">
+                                <div class="flex-1 border-t-2 border-gray-200"></div>
+                            </div>
+                            <ul role="list" class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:gap-y-5 sm:grid-cols-2" style="font-family: 'Parisienne', cursive;">
+                                <li class="flex items-start lg:col-span-1">
+                                    <div class="flex-shrink-0"><svg class="h-5 w-5 text-[#F1E5D1]"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></div>
+                                    <p class="ml-3 text-white">Prewedding</p>
+                                </li>
+                                <li class="flex items-start lg:col-span-1">
+                                    <div class="flex-shrink-0"><svg class="h-5 w-5 text-[#F1E5D1]"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></div>
+                                    <p class="ml-3 text-white">Engagement / Sangjit</p>
+                                </li>
+                                <!-- <li class="flex items-start lg:col-span-1">
+                                    <div class="flex-shrink-0"><svg class="h-5 w-5 text-[#F1E5D1]"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></div>
+                                    <p class="ml-3 text-white">Wedding</p>
+                                </li> -->
+                                <li class="flex items-start lg:col-span-1">
+                                    <div class="flex-shrink-0"><svg class="h-5 w-5 text-[#F1E5D1]"
+                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></div>
+                                    <p class="ml-3 text-white">Wisuda</p>
+                                </li>
+                                <li class="flex items-start lg:col-span-1">
+                                  <div class="flex-shrink-0">
+                                      <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <p class="ml-3 text-white">Akad</p>
+                              </li>
+                              <li class="flex items-start lg:col-span-1">
+                                  <div class="flex-shrink-0">
+                                      <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <p class="ml-3 text-white">Mom & Sister of Bride</p>
+                              </li>
+                              <li class="flex items-start lg:col-span-1">
+                                  <div class="flex-shrink-0">
+                                      <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <p class="ml-3 text-white">Bridesmaid of Bride</p>
+                              </li>
+                              <!-- <li class="flex items-start lg:col-span-1">
+                                  <div class="flex-shrink-0">
+                                      <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <p class="ml-3 text-white">Angpao Girls of Bride</p>
+                              </li> -->
+                              <li class="flex items-start lg:col-span-1">
+                                  <div class="flex-shrink-0">
+                                      <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <p class="ml-3 text-white">Photoshoot</p>
+                              </li>
+                              <!-- <li class="flex items-start lg:col-span-1">
+                                  <div class="flex-shrink-0">
+                                      <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <p class="ml-3 text-white">Graduation / Wisuda</p>
+                              </li> -->
+                              <li class="flex items-start lg:col-span-1">
+                                  <div class="flex-shrink-0">
+                                      <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <p class="ml-3 text-white">Formal Occasion</p>
+                              </li>
+                              <li class="flex items-start lg:col-span-1">
+                                  <div class="flex-shrink-0">
+                                      <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                      </svg>
+                                  </div>
+                                  <p class="ml-3 text-white">Fashion Show</p>
+                              </li>
+                              <li class="flex items-start lg:col-span-1">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <p class="ml-3 text-white">Maternity</p>
+                            </li>
+                            <li class="flex items-start lg:col-span-1">
+                              <div class="flex-shrink-0">
+                                  <svg class="h-5 w-5 text-[#F1E5D1]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                  </svg>
+                              </div>
+                              <p class="ml-3 text-white">Tasyakuran</p>
+                          </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div
+                        class="py-8 px-6 text-left lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12 bg-[#987070]">
+                        <p class="text-lg leading-6 font-medium text-white">Syarat & Ketentuan</p>
+                        <ul role="list" class="mt-8 space-y-5 lg:space-y-0 lg:grid lg:grid-cols-1 lg:gap-x-8 lg:gap-y-5">
+                          <li class="flex items-start lg:col-span-1">
+                              <div class="flex-shrink-0">
+                                  <svg class="h-5 w-5 text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                      <path fill-rule="evenodd" d="M10 0a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V4h2v6z" clip-rule="evenodd"></path>
+                                  </svg>
+                              </div>
+                              <p class="ml-3 text-white">DP Minimal 100K</p>
+                          </li>
+                          <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M10 0a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V4h2v6z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-white">Hari-H pelunasan </p>
+                        </li>
+                        <li class="flex items-start lg:col-span-1">
+                          <div class="flex-shrink-0">
+                              <svg class="h-5 w-5 text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                  <path fill-rule="evenodd" d="M10 0a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V4h2v6z" clip-rule="evenodd"></path>
+                              </svg>
+                          </div>
+                          <p class="ml-3 text-white">Booking makeup lebih dari 1 orang wajib DP terlebih dahulu</p>
+                      </li>
+                          <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                              <svg class="h-5 w-5 text-red-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm3.293 13.293a1 1 0 01-1.414 1.414L10 11.414 7.121 14.293a1 1 0 01-1.414-1.414L8.586 10 5.707 7.121a1 1 0 011.414-1.414L10 8.586l2.879-2.879a1 1 0 011.414 1.414L11.414 10l2.879 2.879z" clip-rule="evenodd"/>
+                              </svg>
+                            </div>
+                              <p class="ml-3 text-white">Eyelash extention/lashlift (baru)</p>
+                          </li>
+                          <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                              <svg class="h-5 w-5 text-red-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm3.293 13.293a1 1 0 01-1.414 1.414L10 11.414 7.121 14.293a1 1 0 01-1.414-1.414L8.586 10 5.707 7.121a1 1 0 011.414-1.414L10 8.586l2.879-2.879a1 1 0 011.414 1.414L11.414 10l2.879 2.879z" clip-rule="evenodd"/>
+                              </svg>
+                            </div>
+                              <p class="ml-3 text-white">Treatment wajah mendekati hari-H</p>
+                          </li>
+                          <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                              <svg class="h-5 w-5 text-red-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm3.293 13.293a1 1 0 01-1.414 1.414L10 11.414 7.121 14.293a1 1 0 01-1.414-1.414L8.586 10 5.707 7.121a1 1 0 011.414-1.414L10 8.586l2.879-2.879a1 1 0 011.414 1.414L11.414 10l2.879 2.879z" clip-rule="evenodd"/>
+                              </svg>
+                            </div>
+                              <p class="ml-3 text-white">Menggunakan krim racikan /merkuri</p>
+                          </li>
+                          <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                              <svg class="h-5 w-5 text-red-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm3.293 13.293a1 1 0 01-1.414 1.414L10 11.414 7.121 14.293a1 1 0 01-1.414-1.414L8.586 10 5.707 7.121a1 1 0 011.414-1.414L10 8.586l2.879-2.879a1 1 0 011.414 1.414L11.414 10l2.879 2.879z" clip-rule="evenodd"/>
+                              </svg>
+                            </div>
+                              <p class="ml-3 text-white">Ruangan yg terlalu panas</p>
+                          </li>
+                          <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                              <svg class="h-5 w-5 text-red-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm3.293 13.293a1 1 0 01-1.414 1.414L10 11.414 7.121 14.293a1 1 0 01-1.414-1.414L8.586 10 5.707 7.121a1 1 0 011.414-1.414L10 8.586l2.879-2.879a1 1 0 011.414 1.414L11.414 10l2.879 2.879z" clip-rule="evenodd"/>
+                              </svg>
+                            </div>
+                              <p class="ml-3 text-white">Penggunaan retinol mendekati hari H</p>
+                          </li>
+                          
+                          
+
+                          <li class="flex items-start lg:col-span-1">
+                              <div class="flex-shrink-0">
+                                  <svg class="h-5 w-5 text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                      <path fill-rule="evenodd" d="M10 0a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V4h2v6z" clip-rule="evenodd"></path>
+                                  </svg>
+                              </div>
+                              <p class="ml-3 text-white">Apabila makeup rusak karena melanggar rules diatas resiko ditanggung client</p>
+                          </li>
+                          <li class="flex items-start lg:col-span-1">
+                              <div class="flex-shrink-0">
+                                  <svg class="h-5 w-5 text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                      <path fill-rule="evenodd" d="M10 0a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V4h2v6z" clip-rule="evenodd"></path>
+                                  </svg>
+                              </div>
+                              <p class="ml-3 text-white">Biaya transport MUA full ditanggung client sesuai jarak (luar kota) </p>
+                          </li>
+                          <li class="flex items-start lg:col-span-1">
+                            <div class="flex-shrink-0">
+                                <svg class="h-5 w-5 text-yellow-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M10 0a10 10 0 100 20 10 10 0 000-20zm1 14h-2v-2h2v2zm0-4h-2V4h2v6z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-white">DP Refund Apabila dari pihak MUA yang membatalkan selebihnya hangus </p>
+                        </li>
+                      </ul>
+                      
+                        <!-- <div class="mt-6">
+                            <div class="rounded-md shadow">
+                                <a href="#"
+                                    class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600">Buy
+                                    now</a>
+                            </div>
+                            <p class="text-gray-300 text-sm mt-3">100% money back guarantee</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+</container> 
+      </div>
+      </div>
+      </container>
+    </container>
+
+    <container>
+      <div class="max-w-3xl mx-auto px-5 mt-28">
+        <div class="flex flex-col justify-center">
+            <div class="text-center">
+                <h2 class="font-semibold text-3xl">Produk Terpercaya</h2>
+                <p class="max-w-md mx-auto mt-2 text-gray-500">
+                    Kami menggunakan brand pilihan dan terpercaya memberikan hasil yang terbaik untuk customers kami selalu.
+                </p>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-10 mt-2 md:justify-around">
+                <div class="text-gray-400 ">
+                  <img src="img/br1.svg" alt="Descriptive alt text" width="82" height="40">
+                </div>
+                <div class="text-gray-400 ">
+                  <img src="img/br2.svg" alt="Descriptive alt text" width="82" height="40">
+
+                </div>
+                <div class="text-gray-400 ">
+                  <img src="img/br3.svg" alt="Descriptive alt text" width="82" height="40">
+
+                </div>
+                <div class="text-gray-400 ">
+                  <img src="img/br4.svg" alt="Descriptive alt text" width="82" height="40">
+
+                </div>
+                <div class="text-gray-400 ">
+                  <img src="img/br5.svg" alt="Descriptive alt text" width="82" height="40">
+
+                </div>
+
+                <div class="text-gray-400 ">
+                  <img src="img/br6.svg" alt="Descriptive alt text" width="82" height="40">
+
+                </div>
+
+                <div class="text-gray-400 ">
+                  <img src="img/br7.svg" alt="Descriptive alt text" width="82" height="40">
+
+                </div>
+
+                <div class="text-gray-400 ">
+                  <img src="img/br8.svg" alt="Descriptive alt text" width="82" height="40">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </container>
+    <br>
+
+    <container>
+      <section class="bg-neutral-100">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+            <div class="max-w-2xl lg:max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900">Kunjungi Alamat Kami</h2>
+                <p class="mt-4 text-lg text-gray-500">Alamat kami berdada di belakang Mirfa Kunci Stempel Kuala Pembuang 1</p>
+            </div>
+            <div class="mt-8 lg:mt-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="rounded-lg overflow-hidden shadow-lg  ">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d248.93159533878824!2d112.55050888946974!3d-3.3732663330733423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1728259003731!5m2!1sen!2sid"
+                            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div>
+                        <div class="max-w-full mx-auto rounded-lg overflow-hidden">
+                            <div class="px-6 py-4">
+                                <h3 class="text-lg font-medium text-gray-900">Alamat </h3>
+                                <p class="mt-1 text-gray-600">Jl. Patimura, Kuala Pembuang Satu, Kec. Seruyan Hilir, Kabupaten Seruyan, Kalimantan Tengah 74215</p>
+                            </div>
+                            <div class="border-t border-gray-200 px-6 py-4">
+                                <h3 class="text-lg font-medium text-gray-900">Waktu</h3>
+                                <p class="mt-1 text-gray-600">Senin - Jum'at: 9 pagi - 5 sore</p>
+                                <p class="mt-1 text-gray-600">Sabtu: 10 pagi - 4 sore</p>
+                                <p class="mt-1 text-gray-600">Minggu: Tutup</p>
+                            </div>
+                            <div class="border-t border-gray-200 px-6 py-4">
+                                <h3 class="text-lg font-medium text-gray-900">Kontak</h3>
+                                <p class="mt-1 text-gray-600">Email: ninderyshimada504@gmail.com</p>
+                                <p class="mt-1 text-gray-600">Phone: +62 895-0576-7430</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </container>
+
+   
+
+    <footer class="footer footer-center  w-full p-4 bg-gray-300 text-gray-800 sticky bottom-0">
+      <div class="text-center">
+        <p>
+          Copyright © 2024 - 
+          <a class="font-semibold" href="https://www.instagram.com/nindyeryy_makeup/"
+            >Nindyery_makeup </a 
+          >Seruyan All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+  </body>
+</html>
