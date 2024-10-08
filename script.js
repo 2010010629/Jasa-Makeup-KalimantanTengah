@@ -1,4 +1,4 @@
-const words = ["Nindyery_makeup"];
+const words = ["Nindyeryy_makeup"];
 let i = 0;
 let j = 0;
 let currentWord = "";
